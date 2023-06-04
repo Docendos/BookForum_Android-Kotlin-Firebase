@@ -54,7 +54,6 @@ class PdfDetailActivity : AppCompatActivity() {
 
         firebaseAuth = FirebaseAuth.getInstance()
         userType = intent.getStringExtra("userType")!!
-       // checkUser()
 
         bookId = intent.getStringExtra("bookId")!!
 
@@ -336,29 +335,6 @@ class PdfDetailActivity : AppCompatActivity() {
                 Toast.makeText(this, "Failed to add to favourites: ${e.message}", Toast.LENGTH_SHORT).show()
             }
     }
-
-
-
-/*
-    private fun checkUser() {
-        val layout: Int
-
-        when (userType) {
-            "none" -> {
-                changeTheme()
-                layout = R.layout.activity_splash
-                binding.favoriteBtn.visibility = View.GONE
-            }
-            "user" -> {
-                changeTheme()
-                layout = R.layout.activity_splash
-            }
-            else -> layout = R.layout.splash_admin
-        }
-
-        MyApplication.showScreen(layout, binding.root, this@PdfDetailActivity)
-    }
-*/
 
     private fun changeTheme() {
         binding.main.setBackgroundResource(R.drawable.back01)
