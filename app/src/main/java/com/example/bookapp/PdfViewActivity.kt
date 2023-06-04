@@ -74,11 +74,7 @@ class PdfViewActivity : AppCompatActivity() {
                 binding.progressBar.visibility = View.GONE
             }
             .addOnFailureListener { e ->
-                Toast.makeText(
-                    this,
-                    "Failed to upload: ${e.message}",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this, "Failed to upload: ${e.message}", Toast.LENGTH_SHORT).show()
                 binding.progressBar.visibility = View.GONE
             }
     }
