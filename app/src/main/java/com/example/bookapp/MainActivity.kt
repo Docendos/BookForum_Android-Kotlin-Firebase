@@ -15,16 +15,11 @@ class MainActivity : AppCompatActivity() {
         binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
 
-
-        //login
         binding.loginBtn.setOnClickListener{
-            //later
             startActivity(Intent(this, LoginActivity::class.java))
         }
 
-        //skip login
         binding.skipBtn.setOnClickListener{
-            //later
             startActivity(Intent(this, DashboardUserActivity::class.java))
         }
 
