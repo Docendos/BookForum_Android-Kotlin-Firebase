@@ -16,13 +16,11 @@ class AdapterPdfFavorite : RecyclerView.Adapter<AdapterPdfFavorite.HolderPdfFavo
 
     private val context: Context
     private var pdfArrayList: ArrayList<ModelPdf>
-    //private val userType: String
     private lateinit var binding: RowPdfFavouriteBinding
 
     constructor(context: Context, pdfArrayList: ArrayList<ModelPdf>) {
         this.context = context
         this.pdfArrayList = pdfArrayList
-        // this.userType = userType
     }
 
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): HolderPdfFavorite {
@@ -78,11 +76,6 @@ class AdapterPdfFavorite : RecyclerView.Adapter<AdapterPdfFavorite.HolderPdfFavo
                     model.downloadsCount = downloadsCount.toLong()
 
                     val formattedDate = MyApplication.formatTimeStamp(timestamp.toLong())
-
-                   // when (userType) {
-                   //     "user" -> holder.removeFavBtn.setImageResource(R.drawable.remove_teal)
-                   //     "admin" -> holder.removeFavBtn.setImageResource(R.drawable.remove_salmon)
-                   // }
 
                     MyApplication.loadCategory("$categoryId", holder.categoryTv)
                     MyApplication.loadPdfFromUrlSinglePage("$url", "$title", holder.pdfView, holder.progressBar, null)
