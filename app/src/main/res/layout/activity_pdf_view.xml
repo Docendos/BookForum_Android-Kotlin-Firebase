@@ -14,7 +14,6 @@
         android:layout_height="?actionBarSize"
         android:elevation="20sp">
 
-        <!--Кнопка назад-->
         <ImageButton
             android:id="@+id/backBtn"
             android:layout_width="wrap_content"
