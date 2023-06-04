@@ -35,13 +35,6 @@ class ProfileEditActivity : AppCompatActivity() {
 
     private lateinit var userType: String
 
-    //override fun onBackPressed() {
-       // val intent = Intent(this, ProfileActivity::class.java)
-       // intent.putExtra("userType", userType)
-       // startActivity(intent)
-       // finish()
-   // }
-
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         binding = ActivityProfileEditBinding.inflate(layoutInflater)
@@ -50,11 +43,6 @@ class ProfileEditActivity : AppCompatActivity() {
         progressDialog = ProgressDialog(this)
         progressDialog.setTitle("One moment")
         progressDialog.setCanceledOnTouchOutside(false)
-
-        //userType = intent.getStringExtra("userType")!!
-       // if (userType == "user") {
-        //    changeTheme()
-       // }
 
         firebaseAuth = FirebaseAuth.getInstance()
         loadUserInfo()
