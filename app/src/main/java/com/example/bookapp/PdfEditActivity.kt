@@ -136,23 +136,11 @@ class PdfEditActivity : AppCompatActivity() {
         description = binding.descriptionEt.text.toString().trim()
 
         if (title.isEmpty()) {
-            Toast.makeText(
-                this,
-                "Enter title",
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, "Enter title", Toast.LENGTH_SHORT).show()
         } else if (description.isEmpty()) {
-            Toast.makeText(
-                this,
-                "Enter description",
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, "Enter description", Toast.LENGTH_SHORT).show()
         } else if (selectedCategoryId.isEmpty()) {
-            Toast.makeText(
-                this,
-                "Choose category",
-                Toast.LENGTH_SHORT
-            ).show()
+            Toast.makeText(this, "Choose category", Toast.LENGTH_SHORT).show()
         } else {
             updatePdf()
         }
@@ -172,19 +160,11 @@ class PdfEditActivity : AppCompatActivity() {
             .updateChildren(hashMap)
             .addOnSuccessListener {
                 progressDialog.dismiss()
-                Toast.makeText(
-                    this,
-                    "Updated!",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this, "Updated!", Toast.LENGTH_SHORT).show()
             }
             .addOnFailureListener { e ->
                 progressDialog.dismiss()
-                Toast.makeText(
-                    this,
-                    "Could not update data due to: ${e.message}..",
-                    Toast.LENGTH_SHORT
-                ).show()
+                Toast.makeText(this, "Could not update data due to: ${e.message}..", Toast.LENGTH_SHORT).show()
             }
 
     }
